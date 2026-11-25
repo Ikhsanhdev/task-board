@@ -1,0 +1,171 @@
+.board-content {
+    --background: #f6f7fb;
+    font-family: Arial, sans-serif;
+}
+
+/* Main board */
+
+.board-main {
+    padding: 32px;
+}
+
+.board-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.board-subtitle {
+    color: #8b8fa1;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.board-heading h1 {
+    color: #25283b;
+    font-size: 26px;
+    margin: 8px 0;
+}
+
+.board-description {
+    color: #85899a;
+    font-size: 13px;
+}
+
+.team-avatars {
+    display: flex;
+    align-items: center;
+}
+
+.team-avatars .avatar+.avatar {
+    margin-left: -7px;
+    border: 2px solid white;
+}
+
+.avatar-purple {
+    background: #eee0ff;
+    color: #8050b5;
+}
+
+.avatar-orange {
+    background: #ffe7d5;
+    color: #c36b30;
+}
+
+.avatar-more {
+    background: #e9e9ef;
+    color: #686b7b;
+}
+
+/* Kanban columns */
+
+.board-columns {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding-bottom: 16px;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+.board-columns::-webkit-scrollbar {
+    height: 8px;
+}
+
+.board-columns::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.board-columns::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+
+.board-columns::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.board-columns::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .board-main {
+        padding: 20px 16px;
+    }
+
+    .board-heading h1 {
+        font-size: 21px;
+    }
+
+    .board-columns {
+        gap: 12px;
+    }
+
+    .board-column {
+        min-width: 270px;
+        flex: 0 0 270px;
+    }
+}
+
+.board-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.board-filters input,
+.board-filters select {
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    font-size: 14px;
+}
+
+.board-filters input {
+    min-width: 220px;
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .board-filters {
+        flex-direction: column;
+    }
+
+    .board-filters input,
+    .board-filters select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .board-main {
+        padding: 16px 12px;
+    }
+
+    .board-heading {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .board-heading h1 {
+        font-size: 20px;
+    }
+
+    .board-column {
+        flex-basis: 85%;
+        min-width: 85%;
+    }
+}

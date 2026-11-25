@@ -1,0 +1,84 @@
+.board-column {
+    min-width: 260px;
+    flex: 0 0 280px;
+    background: #eef0f6;
+    border-radius: 12px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+
+.column-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.column-title h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #35384b;
+    margin: 0;
+}
+
+.task-count {
+    background: #ffffff;
+    color: #85899a;
+    border-radius: 6px;
+    padding: 3px 7px;
+    font-size: 11px;
+}
+
+.column-menu {
+    border: none;
+    background: transparent;
+    color: #85899a;
+    cursor: pointer;
+}
+
+.column-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.add-card-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #c9cbd7;
+    background: transparent;
+    border-radius: 8px;
+    color: #85899a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.add-card-btn:hover {
+    background: #e5e7f0;
+}
+
+.add-column-task-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #6558e8;
+    font-size: 20px;
+    font-weight: 500;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-column-task-btn:hover {
+    background: #e5e2ff;
+    transform: scale(1.05);
+}

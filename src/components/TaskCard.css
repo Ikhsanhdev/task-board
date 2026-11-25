@@ -1,0 +1,181 @@
+.task-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e9eaf0;
+    box-shadow: 0 2px 5px rgba(30, 35, 70, 0.03);
+}
+
+.task-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.task-label {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.label-feature {
+    background: #e5eaff;
+    color: #5368c9;
+}
+
+.label-bug {
+    background: #ffe6e6;
+    color: #d45d5d;
+}
+
+.label-issue {
+    background: #fff0d9;
+    color: #bb8332;
+}
+
+.label-undefined {
+    background: #eeeeee;
+    color: #777777;
+}
+
+.task-card h3 {
+    color: #303348;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.task-description {
+    color: #85899a;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 0 18px;
+}
+
+.task-footer {
+    border-top: 1px solid #f0f0f3;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-assignee {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    color: #777b8d;
+}
+
+.task-date {
+    font-size: 11px;
+    color: #85899a;
+}
+
+.task-menu {
+    border: none;
+    background: transparent;
+    color: #85899a;
+    cursor: pointer;
+}
+
+/* Avatar */
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.avatar-blue {
+    background: #dce9ff;
+    color: #3768b5;
+}
+
+.task-card {
+    box-sizing: border-box;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.task-card-content {
+    cursor: pointer;
+}
+
+.task-description {
+    overflow-wrap: anywhere;
+}
+
+/* Progress bar */
+.card-progress {
+    height: 5px;
+    margin-bottom: 12px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.card-progress-fill {
+    height: 100%;
+    background: #6558e8;
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+.card-progress-fill.complete {
+    background: #22c55e;
+}
+
+/* Footer */
+.task-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: #85899a;
+    white-space: nowrap;
+}
+
+.task-date {
+    white-space: nowrap;
+}
+
+/* Priority badge (belum ada style-nya di CSS kamu) */
+.task-priority {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.priority-low {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.priority-medium {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.priority-high {
+    background: #fee2e2;
+    color: #b91c1c;
+}

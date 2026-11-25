@@ -1,0 +1,199 @@
+.board-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e8eaf0;
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #25283b;
+}
+
+.brand-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #6558e8;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+.board-name {
+    color: #64697b;
+    font-size: 13px;
+}
+
+.navbar-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navbar-filters input,
+.navbar-filters select {
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    font-size: 13px;
+    min-width: 140px;
+}
+
+.navbar-filters input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+}
+
+.reset-filter-btn {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #f0efff;
+    color: #6558e8;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reset-filter-btn:hover {
+    background: #e5e2ff;
+}
+
+@media (max-width: 768px) {
+    .board-navbar {
+        padding: 14px 16px;
+    }
+
+    .navbar-filters input[type="text"] {
+        flex-basis: 100%;
+    }
+
+    .navbar-filters input,
+    .navbar-filters select {
+        flex: 1;
+        min-width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .board-navbar {
+        padding: 12px;
+        gap: 14px;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .brand-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .board-name {
+        font-size: 11px;
+    }
+
+    .navbar-filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .navbar-filters input,
+    .navbar-filters select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .navbar-filters input[type="text"] {
+        grid-column: span 2;
+    }
+
+    .reset-filter-btn {
+        grid-column: span 2;
+    }
+}
+
+.date-picker-trigger {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #334155;
+    font-family: inherit;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.date-picker-trigger:hover {
+    border-color: #6558e8;
+    box-shadow: 0 0 0 3px rgba(101, 88, 232, 0.08);
+}
+
+/* ---------- Popover ---------- */
+.date-picker-popover {
+    --width: 350px;
+    --max-width: 95vw;
+    --height: auto;
+    --offset-y: 6px;
+    --background: #ffffff;
+    --border-radius: 14px;
+    --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Ionic memakai shadow DOM, jadi wrapper dalamnya perlu di-style lewat ::part */
+.date-picker-popover::part(content) {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.date-picker-popover ion-datetime {
+    --background: #ffffff;
+    width: 100%;
+    min-width: 320px;
+    min-height: 340px;
+    border-radius: 14px;
+}
+
+/* ---------- Datetime ---------- */
+ion-datetime {
+    --background: #ffffff;
+    --background-rgb: 255, 255, 255;
+    --title-color: #334155;
+    --wheel-highlight-background: #f0efff;
+    --ion-color-primary: #6558e8;
+    --ion-text-color: #334155;
+    color: #334155;
+    border-radius: 14px;
+}
+
+.navbar-date-filter {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
